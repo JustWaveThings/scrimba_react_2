@@ -14,3 +14,5 @@ console.log(navbar);
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 root.render(navbar);
+
+// OR  ReactDOM.createRoot(document.getElementById("root")).render(navbar)
