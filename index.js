@@ -1,5 +1,14 @@
-const newRoot = document.getElementById('root');
-const newElement = document.createElement('h1');
-newElement.textContent = 'some text content';
-newElement.className = 'header';
-newRoot.appendChild(newElement);
+const navbar = (
+	<nav>
+		<h1>Brand Name</h1>
+		<ul>
+			<li>Pricing</li>
+			<li>About</li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+);
+
+console.log(navbar);
+
+ReactDOM.render(navbar, document.getElementById('root'));
