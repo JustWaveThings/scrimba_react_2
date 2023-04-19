@@ -1,4 +1,4 @@
-const navbar = (
+/* const navbar = (
 	<nav>
 		<h1>Brand Name</h1>
 		<ul>
@@ -8,7 +8,7 @@ const navbar = (
 		</ul>
 	</nav>
 );
-
+ */
 /* const factArray = [
 	'React was developed by Facebook: React was developed and released by Facebook in 2013, and since then it has become one of the most popular JavaScript libraries for building user interfaces',
 
@@ -31,19 +31,33 @@ const factArray = [
 
 function App() {
 	return (
-		<div>
-			<Image height={'80px'} />
-			<Header header={"Reasons I'm excited to learn React"} />
+		<div className="App">
+			<Header
+				className={'headerNav'}
+				header={'Scrimba React Course'}
+			>
+				<Nav>
+					<Image height={'80px'} />
+				</Nav>
+			</Header>
+			<Header
+				header={"Five Reasons I'm excited to Learn React:"}
+				className={'smallHeader'}
+			/>
 			<ListContainer listType={'ol'}>
 				<UlListItems array={factArray} />
 			</ListContainer>
+			<Footer
+				text={'© 20xx <last name here> development. All rights reserved.'}
+				className={'Footer'}
+			/>
 		</div>
 	);
 }
 
 function Image({ height }) {
 	return (
-		<div>
+		<div className="Image">
 			<img
 				src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
 				className="App-logo"
@@ -54,8 +68,21 @@ function Image({ height }) {
 	);
 }
 
-function Header({ header }) {
-	return <h1> {header}</h1>;
+function Header({ header, className, children }) {
+	return (
+		<div className={className}>
+			<h1>{header}</h1>
+			{children}
+		</div>
+	);
+}
+
+function Nav({ children }) {
+	return (
+		<div className="Nav">
+			<nav>{children}</nav>
+		</div>
+	);
 }
 
 function ListContainer({ listType, children }) {
@@ -63,7 +90,18 @@ function ListContainer({ listType, children }) {
 }
 
 function UlListItems({ array }) {
-	return array.map(item => <li key={item}>{item}</li>);
+	return array.map(item => (
+		<li
+			className="li"
+			key={item}
+		>
+			{item}
+		</li>
+	));
+}
+
+function Footer({ text, className }) {
+	return <p className={className}>{text}</p>;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
