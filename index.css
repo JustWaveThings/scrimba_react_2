@@ -8,7 +8,8 @@ body {
 }
 
 li {
-	margin-top: 1rem;
+	margin-top: 0.5rem;
+	list-style: none;
 }
 
 .headerNav {
@@ -27,4 +28,14 @@ li {
 .footer {
 	margin-top: auto;
 	text-align: center;
+}
+
+nav {
+	display: flex;
+}
+
+#root > div > div.headerNav > div > nav > div:nth-child(2) > ul {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
 }
