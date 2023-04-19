@@ -8,3 +8,7 @@ body {
 	height: 100svh;
 	margin: 2rem;
 }
+
+li {
+	margin-top: 1rem;
+}

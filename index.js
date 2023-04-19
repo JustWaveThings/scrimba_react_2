@@ -9,7 +9,7 @@ const navbar = (
 	</nav>
 );
 
-const factArray = [
+/* const factArray = [
 	'React was developed by Facebook: React was developed and released by Facebook in 2013, and since then it has become one of the most popular JavaScript libraries for building user interfaces',
 
 	"React is not a framework: React is often mistakenly referred to as a framework, but it's actually a library for building user interfaces. Unlike a framework, React doesn't prescribe a particular way of organizing your code or building your application",
@@ -19,14 +19,22 @@ const factArray = [
 	'React Native allows for building native mobile apps: React Native is a framework for building mobile apps using React. With React Native, you can write code once and deploy it to both iOS and Android devices, while still providing a native look and feel',
 
 	'React has a strong ecosystem: React has a large and active community, which has created a rich ecosystem of libraries, tools, and resources. This ecosystem includes everything from state management libraries like Redux to UI component libraries like Material-UI',
+]; */
+
+const factArray = [
+	'React is one of the most popular JavaScript libraries for building user interfaces, which means learning it can increase your job opportunities and career prospects.',
+	'React is component-based, which makes it easier to write reusable and modular code.',
+	'React has a large and active community, which means there are plenty of resources and support available for developers.',
+	"React's virtual DOM allows for fast and efficient updates to the user interface, making it ideal for building complex and interactive applications.",
+	'React works well with other JavaScript libraries and frameworks, allowing you to integrate it with your existing projects or learn other technologies alongside it.',
 ];
 
 function App() {
 	return (
 		<div>
 			<Image height={'80px'} />
-			<Header header={'Fun facts about React'} />
-			<ListContainer listType={'ul'}>
+			<Header header={"Reasons I'm excited to learn React"} />
+			<ListContainer listType={'ol'}>
 				<UlListItems array={factArray} />
 			</ListContainer>
 		</div>
