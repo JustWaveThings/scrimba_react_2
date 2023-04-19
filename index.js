@@ -101,7 +101,7 @@ function UlListItems({ array }) {
 }
 
 function Footer({ text, className }) {
-	return <p className={className}>{text}</p>;
+	return <small className={className}>{text}</small>;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
